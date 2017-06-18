@@ -5,10 +5,17 @@ using UnityEngine;
 public class jumpscript : MonoBehaviour
 {
     public float Jump;
+
+    public bool Jumpable { get; private set; }
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0));
-        jump;
+            if (Jumpable && Input.GetKeyDown()
+            {
+                Jumpable = false;
+                GetComponent<Rigidbody2D>()
+                    .AddForce(new Vector2(0, Jump));
+            }
     }
 }
